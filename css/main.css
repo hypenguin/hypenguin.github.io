@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #14ffd9;
+  background: #2d1b62;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2438,4 +2438,11 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+body {
+  background: url("https://github.com/hypenguin/picx-images-hosting/raw/master/bg.3go5v1sj89.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 100% 100%;
 }
