@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2d1b62;
+  background: #59a4c8;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2440,7 +2440,7 @@ ul.breadcrumb li + li:last-child {
   padding: 0;
 }
 body {
-  background: url("https://github.com/hypenguin/picx-images-hosting/raw/master/bg.3go5v1sj89.webp");
+  background: url("https://github.com/hypenguin/picx-images-hosting/raw/master/bg.67x834lzps.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
