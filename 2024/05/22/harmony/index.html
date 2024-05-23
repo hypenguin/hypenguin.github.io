@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="a penguin from the northern hemisphere">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="作者提出了一种分布式的传输层协议Harmony，来近似集中式的理想方案(FastPass)。与尽力而为的传输层协议相比，Harmony在无故障场景下实现了无丢包且有时延上界的消息传递，即可预测的网络性能。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Paper Reading]Harmony: A Congestion-free Datacenter Architecture (NSDI&#39;24)">
+<meta property="og:url" content="http://example.com/2024/05/22/harmony/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="a penguin from the northern hemisphere">
+<meta property="og:description" content="作者提出了一种分布式的传输层协议Harmony，来近似集中式的理想方案(FastPass)。与尽力而为的传输层协议相比，Harmony在无故障场景下实现了无丢包且有时延上界的消息传递，即可预测的网络性能。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-22T12:40:33.092Z">
+<meta property="article:modified_time" content="2024-05-23T07:08:08.409Z">
 <meta property="article:author" content="mhy">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/2024/05/22/harmony/">
 
 
 <script id="page-configurations">
@@ -38,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Hexo</title>
+  <title>[Paper Reading]Harmony: A Congestion-free Datacenter Architecture (NSDI'24) | Hexo</title>
   
 
 
@@ -141,96 +143,143 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/22/harmony/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://github.com/hypenguin/picx-images-hosting/raw/master/blingbling.3razo5zh0o.gif">
+      <meta itemprop="name" content="mhy">
+      <meta itemprop="description" content="a penguin from the northern hemisphere">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Paper Reading]Harmony: A Congestion-free Datacenter Architecture (NSDI'24)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-05-22 20:40:33" itemprop="dateCreated datePublished" datetime="2024-05-22T20:40:33+08:00">2024-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-23 15:08:08" itemprop="dateModified" datetime="2024-05-23T15:08:08+08:00">2024-05-23</time>
+              </span>
+
+          
+            <span id="/2024/05/22/harmony/" class="post-meta-item leancloud_visitors" data-flag-title="[Paper Reading]Harmony: A Congestion-free Datacenter Architecture (NSDI'24)" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 3 posts in total. Keep on posting.</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2024/05/22/harmony/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2024/05/22/harmony/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <div class="post-description">作者提出了一种分布式的传输层协议Harmony，来近似集中式的理想方案(FastPass)。与尽力而为的传输层协议相比，Harmony在无故障场景下实现了无丢包且有时延上界的消息传递，即可预测的网络性能。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-05-22T20:40:33+08:00"
-              content="2024-05-22">
-          05-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/05/22/harmony/" itemprop="url">
-            <span itemprop="name">[Paper Reading]Harmony: A Congestion-free Datacenter Architecture (NSDI'24)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-03-22T21:08:22+08:00"
-              content="2024-03-22">
-          03-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/03/22/blog-tutorial/" itemprop="url">
-            <span itemprop="name">Tutorial for Blog with Hexo and Next</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-03-16T15:54:55+08:00"
-              content="2024-03-16">
-          03-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/03/16/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <h3 id="方案设计"><a href="#方案设计" class="headerlink" title="方案设计"></a>方案设计</h3><p>Harmony协议基于经典的资源预留协议（RSVP）和虚拟通道的概念</p>
+<ul>
+<li><strong>Host slots</strong>: 每个发送方和接收方维护K个slots，每个slot允许使用B&#x2F;K带宽速率发送和接收消息，其中B是接入链路带宽。每个slot只能分配给一个消息，但一个消息可以被分配多个slots。</li>
+<li><strong>Virtual links</strong>: 每个物理链路被逻辑上分解为多个虚拟链路vl，每个vl的带宽也是B&#x2F;K。每个vl至多可以分配给一个消息，但一个消息可以被分配多个vl。</li>
+</ul>
+<p>Harmony Workflow</p>
+<ol>
+<li>发送方在待发送的消息到达时，立即向接收方发送一个request控制包。</li>
+<li>接收方维护空闲slots的记录。接收到request后，如果有空闲的slot，则分配一个slot给该消息，并发送RSVP控制包给发送方。如果没有空闲slots，则将request加入待处理的pending_request列表，并启动一个定时器。如果该request的定时器达到δadmission时间，接收方会从pending_request中移除request，并向发送方发送一个reject控制包。</li>
+<li>每个交换机维护每个链路上空闲虚拟链路的数量。接收到RSVP控制包后，交换机会随机选择一个空闲的出链路，并在RSVP控制包头部嵌入其标识符，然后转发RSVP控制包（随后所有数据包和控制包的转发遵循包头的标识符，即源路由方式）。如果没有空闲虚拟链路，则将RSVP转换为reject包。</li>
+<li>每个发送方也维护自己空闲slots的记录。在接收到RSVP时，如果有一个或多个空闲slots，则分配一个slot给该消息，并开始以该slot对应的带宽传输消息。消息传输完成后，发送方发送一个complete控制包(并将对应slot释放掉)。如果没有空闲slots，则发送reject给接收方。</li>
+<li>每个交换机和接收方在接收到reject或complete时，会标记相应的虚拟链路或slots为空闲。接收方收到complete时，同样给发送方回一个complete。发送方收到complete或reject时，分别作相应处理。</li>
+</ol>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ol>
+<li>时延性能保证。理论上，Harmony具有以下两方面性质：</li>
+</ol>
+<ul>
+<li>每个交换机的每个出链路上，所有消息的到达率总和不超过链路带宽。这保证了zero persistent queueing（当然还是会有transient queueing）</li>
+<li>任何物理链路被分配的消息数量最多与虚拟链路的数量相同。<br>这两点让Harmony在最坏情况下也能保证较低的排队时延上界，即保证了网络性能的可预测性(modern datacenter networks have tiny unloaded round trip times (RTTs), so queueing delays and buffer overflow are the root cause of unpredictability)。对于配置400Gbps Tomahawk-4 switches (64 ports and 113 MB buffers), 1.5 KB MTU, 8个虚拟链路的FatTree拓扑，在所有交换机处总的队列时延上界为3.15us。</li>
+</ul>
+<p>不仅如此，Harmony以消息为粒度分配slots和vl直到消息传输结束，因此排队时延的上界也进一步保证了(1)消息传播过程中的FCT slowdown的界限；(2)迅速识别并处理硬件故障情况。</p>
+<ol start="2">
+<li>接近理想方案的分配效率</li>
+</ol>
+<p>尽管Harmony是一个分布式的分组交换方案，根据本地状态作出分配决策，但Harmony通过slots和vl的方式将物理资源拆分成虚拟资源，以虚拟资源为粒度实现了电路交换中资源预留的效果，这保证了尽可能多的消息都能分配到资源，因为一条物理链路能同时被多个消息所使用（具体见图2）。因此Harmony保持了分布式方案的优势，不需要集中式方案&#x2F;电路交换所需的时钟同步，即可接近理想情况下的分配决策和可预测的时延性能。</p>
+<h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>对于Congestion-free traffic (128 KB RPC, 差不多是BDP的2倍多)，Harmony通过testbed和simulation验证了实际slowdown性能并未超过理论上界，且尽可能保证了maximum sustainable load (defined as the input load for which no message is rejected)。与理想的集中式方案Fastpass相比，Harmony分布式的方案能够接近其性能。与HPCC和dcPIM相比，congestion-free traffic和best-effort delivery traffic整体的平均slowdown和p99 slowdown更好。</p>
+<h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><ol>
+<li><p>整体更好的性能结果显然并不意味着所有应用的性能都更好(§1)。Harmony需要一个RTT请求资源分配，这严重限制了短流的性能（当然随着消息长度增加，该影响会逐渐减弱）。因此，Harmony用the third highest priority来隔离best-effort traffic和congestion-free traffic，前者还是要用拥塞控制方案来传输。个人理解，这样还是会稍微牺牲一下短流的性能，毕竟优先级更低。但因为高优先级也不会直接用掉全部带宽（以B&#x2F;K为单位分配），所以剩下的带宽应该也是可以给best-effort traffic用。</p>
+</li>
+<li><p>Harmony保证了一部分消息的时延上界，将剩下尽力而为的流量与这部分消息隔离，感觉思路有点像之前deadline相关的调度方案，但Harmony更细粒度的分配方案是个亮点，当然这需要收发两端以及可编程交换机共同参与。更多讨论与应用前景见原文§6。另外Harmony很多理论分析和设计的细节在technical report[5]里面，但貌似没有公开。</p>
+</li>
+</ol>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/22/blog-tutorial/" rel="prev" title="Tutorial for Blog with Hexo and Next">
+      <i class="fa fa-chevron-left"></i> Tutorial for Blog with Hexo and Next
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -277,6 +326,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.</span> <span class="nav-text">方案设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%83%BD"><span class="nav-number">3.</span> <span class="nav-text">性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comments"><span class="nav-number">4.</span> <span class="nav-text">Comments</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
