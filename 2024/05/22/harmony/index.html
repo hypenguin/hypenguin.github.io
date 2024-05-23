@@ -28,7 +28,7 @@
 <meta property="og:description" content="link of the paper">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-05-22T12:40:33.092Z">
-<meta property="article:modified_time" content="2024-05-23T07:37:00.493Z">
+<meta property="article:modified_time" content="2024-05-23T18:31:20.928Z">
 <meta property="article:author" content="hy">
 <meta name="twitter:card" content="summary">
 
@@ -175,7 +175,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-23 15:37:00" itemprop="dateModified" datetime="2024-05-23T15:37:00+08:00">2024-05-23</time>
+                <time title="Modified: 2024-05-24 02:31:20" itemprop="dateModified" datetime="2024-05-24T02:31:20+08:00">2024-05-24</time>
               </span>
 
           
@@ -225,7 +225,7 @@
 <p>尽管Harmony是一个分布式的分组交换方案，根据本地状态作出分配决策，但Harmony通过slots和vl的方式将物理资源拆分成虚拟资源，以虚拟资源为粒度实现了电路交换中资源预留的效果，这保证了尽可能多的消息都能分配到资源，因为一条物理链路能同时被多个消息所使用（具体见图2）。因此Harmony保持了分布式方案的优势，不需要集中式方案&#x2F;电路交换所需的时钟同步，即可接近理想情况下的分配决策和可预测的时延性能。</p>
 <h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>对于Congestion-free traffic (128 KB RPC, 差不多是BDP的2倍多)，Harmony通过testbed和simulation验证了实际slowdown性能并未超过理论上界，且尽可能保证了maximum sustainable load (defined as the input load for which no message is rejected)。与理想的集中式方案Fastpass相比，Harmony分布式的方案能够接近其性能。与HPCC和dcPIM相比，congestion-free traffic和best-effort delivery traffic整体的平均slowdown和p99 slowdown更好。</p>
 <h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><ol>
-<li><p>整体更好的性能结果显然并不意味着所有应用的性能都更好(§1)。Harmony需要一个RTT请求资源分配，这严重限制了短流的性能（当然随着消息长度增加，该影响会逐渐减弱）。因此，Harmony用the third highest priority来隔离best-effort traffic和congestion-free traffic，前者还是要用拥塞控制方案来传输。个人理解，这样还是会稍微牺牲一下短流的性能，毕竟优先级更低。但因为高优先级也不会直接用掉全部带宽（以B&#x2F;K为单位分配），所以剩下的带宽应该也是可以给best-effort traffic用。</p>
+<li><p>整体更好的性能结果显然并不意味着所有应用的性能都更好(§1)。Harmony需要一个RTT请求资源分配，这严重限制了短流的性能（当然随着消息长度增加，该影响会逐渐减弱）。因此，Harmony用the third highest priority来隔离best-effort traffic和congestion-free traffic，前者还是要用拥塞控制方案来传输。个人理解，这样还是会稍微牺牲一下短流的性能，毕竟优先级更低。</p>
 </li>
 <li><p>Harmony保证了一部分消息的时延上界，将剩下尽力而为的流量与这部分消息隔离，感觉思路有点像之前deadline相关的调度方案，但Harmony更细粒度的分配方案是个亮点，当然这需要收发两端以及可编程交换机共同参与。更多讨论与应用前景见原文§6。另外Harmony很多理论分析和设计的细节在technical report[5]里面，但貌似没有公开。</p>
 </li>
@@ -235,8 +235,6 @@
 
     
     
-    
-
     
         
 
