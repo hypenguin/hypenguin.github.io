@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"hypenguin.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="北半球帝企鹅">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hygo">
-<meta property="og:url" content="https://hypenguin.github.io/archives/2024/05/index.html">
+  <meta name="description" content="在Ubuntu22.04上用waf配置ns-3.1x版本时, GPT也解决不来的玄学问题。。。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="老版本ns-3配置踩坑记">
+<meta property="og:url" content="https://hypenguin.github.io/2024/12/28/%E8%80%81%E7%89%88%E6%9C%ACns-3%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/index.html">
 <meta property="og:site_name" content="hygo">
-<meta property="og:description" content="北半球帝企鹅">
+<meta property="og:description" content="在Ubuntu22.04上用waf配置ns-3.1x版本时, GPT也解决不来的玄学问题。。。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-28T08:28:21.441Z">
+<meta property="article:modified_time" content="2024-12-29T07:22:52.378Z">
 <meta property="article:author" content="fkworld">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://hypenguin.github.io/archives/2024/05/">
+<link rel="canonical" href="https://hypenguin.github.io/2024/12/28/%E8%80%81%E7%89%88%E6%9C%ACns-3%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -38,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | hygo</title>
+  <title>老版本ns-3配置踩坑记 | hygo</title>
   
 
 
@@ -136,56 +138,134 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 5 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hypenguin.github.io/2024/12/28/%E8%80%81%E7%89%88%E6%9C%ACns-3%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://github.com/hypenguin/picx-images-hosting/raw/master/blingbling.3razo5zh0o.gif">
+      <meta itemprop="name" content="fkworld">
+      <meta itemprop="description" content="北半球帝企鹅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hygo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          老版本ns-3配置踩坑记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-28 16:28:21" itemprop="dateCreated datePublished" datetime="2024-12-28T16:28:21+08:00">2024-12-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-12-29 15:22:52" itemprop="dateModified" datetime="2024-12-29T15:22:52+08:00">2024-12-29</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <div class="post-description">在Ubuntu22.04上用waf配置ns-3.1x版本时, GPT也解决不来的玄学问题。。。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+        <p>最近在新环境中配置开源的HPCC代码(<a target="_blank" rel="noopener" href="https://github.com/alibaba-edu/High-Precision-Congestion-Control">https://github.com/alibaba-edu/High-Precision-Congestion-Control</a>) ，两个破问题折磨我三四天，因为搜索不到，强如o1 pro也不会。。。</p>
+<p>1. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File <span class="string">&quot;..../waf&quot;</span>, line 166</span><br><span class="line">    <span class="comment">#BZh91AY&amp;SY???`|???????????????2?????????????????????????????????</span></span><br><span class="line">SyntaxError: <span class="built_in">source</span> code cannot contain null bytes</span><br></pre></td></tr></table></figure>
+<p>如果首选&#x2F;默认python为python3.x。请直接在命令中指定使用python2 .&#x2F;waf 配置、编译和运行<br>waf脚本里明明也对python2和3作了针对性处理，属实是搞不清楚为什么python3不行，python2就可以。。</p>
+<ol start="2">
+<li><p>HPCC所用的ns3版本需要用gcc-5和g++-5来配置和编译，在20.04&#x2F;22.04版本的系统中gcc版本通常太高，需要添加之前的源来安装gcc-5</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://archive.ubuntu.com/ubuntu/ xenial main universe</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ xenial-updates main universe</span><br></pre></td></tr></table></figure>
+<p>添加源之后update时可能还需要验证一下签名。之后再install gcc-5和g++-5。<br>不推荐下载源代码再手动编译安装，非常非常非常非常费时间。。。而且自己也不一定搞得定，源代码里貌似有c++-98和c++-11两个标准的代码，直接make会报错，还是直接找安装包来装更方便。</p>
+</li>
+<li><p>ns-3配置时，不要–enable-tests因为tests部分代码可能会报错，用不到的话就不用管。是否指定–enable-examples选项看自己代码位置。</p>
+</li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-05-22T20:40:33+08:00"
-              content="2024-05-22">
-          05-22
-        </time>
-      </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>fkworld
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://hypenguin.github.io/2024/12/28/%E8%80%81%E7%89%88%E6%9C%ACns-3%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/" title="老版本ns-3配置踩坑记">https://hypenguin.github.io/2024/12/28/老版本ns-3配置踩坑记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/05/22/harmony/" itemprop="url">
-            <span itemprop="name">[Paper Reading]Harmony: A Congestion-free Datacenter Architecture (NSDI'24)</span>
-          </a>
-      </div>
 
-    </header>
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/08/13/SUSS/" rel="prev" title="[Paper Reading]SUSS: Improving TCP Performance by Speeding Up Slow-Start (SIGCOMM'24)">
+      <i class="fa fa-chevron-left"></i> [Paper Reading]SUSS: Improving TCP Performance by Speeding Up Slow-Start (SIGCOMM'24)
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-
-    </div>
-  </div>
   
   
   
 
-  
+
 
 
 
           </div>
           
+    
+  
+  <div class="comments">
+  <script src="https://utteranc.es/client.js" repo="hypenguin/comments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+  </div>
+  
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
